@@ -23,6 +23,13 @@ function hideLoader() {
 
 function handleLogoUpload(event) {
   const file = event.target.files[0];
+  const maxSizeInBytes =  5*1024*1024;
+  if (file.size > maxSizeInBytes){
+    alert("Please upload a file with size less than 5MB");
+    file = "";
+    return;
+  }
+
   const reader = new FileReader();
   reader.readAsDataURL(file);
   reader.onloadend = () => {
@@ -32,6 +39,7 @@ function handleLogoUpload(event) {
     umbrellaImage.style.zIndex = "-1";
   };
 }
+
 logoUploadButton.addEventListener("click", () => {
   logoUploadInput.click();
 });
