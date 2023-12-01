@@ -10,8 +10,6 @@ const logoUploadInput = document.createElement("input");
 logoUploadInput.setAttribute("type", "file");
 logoUploadInput.setAttribute("accept", ".jpg,.png");
 logoUploadInput.style.display = "none";
-logoUploadButton.style.backgroundColor = "#0000FF";
-document.body.style.backgroundColor = "#C5E0DC";
 
 function showLoader() {
   loaderContainer.style.opacity = "1";
@@ -30,7 +28,6 @@ function handleLogoUpload(event) {
     uploadedLogo.src = reader.result;
     uploadedLogo.style.display = "block";
     umbrellaImage.style.zIndex = "-1";
-    // umbrellaImage.style.backgroundImage = `url('${reader.result}')`;
   };
 }
 logoUploadButton.addEventListener("click", () => {
