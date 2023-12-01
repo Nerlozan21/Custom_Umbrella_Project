@@ -10,6 +10,8 @@ const logoUploadInput = document.createElement("input");
 logoUploadInput.setAttribute("type", "file");
 logoUploadInput.setAttribute("accept", ".jpg,.png");
 logoUploadInput.style.display = "none";
+document.body.style.backgroundColor = "#C5E0DC";
+logoUploadButton.style.backgroundColor = "#0000FF";
 
 function showLoader() {
   loaderContainer.style.opacity = "1";
