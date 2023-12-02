@@ -83,8 +83,7 @@
   align-items: center;
   justify-items: center;
   justify-content: center;
-  border: 0.5px solid #ccc;
-  color:#f2f2f2;
+  border: 0px solid #ccc;
   border-radius: 5px;
   background-image: url("./assets/upload_icon.svg");
   background-repeat: no-repeat;
@@ -93,7 +92,7 @@
   background-position-x: 1vw;
   text-align: center;
   line-height: 20px;
-  font-size: 19px;
+  font-size: 22px;
   cursor: pointer;
   width: 23vw;
   height: 7.5vh;
