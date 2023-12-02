@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&display=swap');
-*{
-  font-family: 'Arimo', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&display=swap");
+* {
+  font-family: "Arimo", sans-serif;
 }
 .container {
   display: flex;
@@ -42,78 +42,77 @@
   margin-right: 200px;
   display: flex;
   flex-direction: column;
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
 }
-.themes-container h1{
+.themes-container h1 {
   font-size: xx-large !important;
 }
-.themes img{
+.themes img {
   border-radius: 50px;
   cursor: pointer;
   border: 0px;
 }
 .upload-button {
   display: flex;
+  align-items: center;
+  justify-items: center;
   justify-content: left;
   align-items: left;
   margin-bottom: 20px;
 }
-.loader-container{
+.loader-container {
   align-items: center;
 }
-.loader-container img{
+.loader-container img {
   animation-name: spin;
   animation-duration: 2000ms;
   animation-iteration-count: infinite;
-  animation-timing-function: linear; 
+  animation-timing-function: linear;
 }
 @keyframes spin {
   from {
-      transform:rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-      transform:rotate(360deg);
+    transform: rotate(360deg);
   }
 }
+
 #logo-upload-button {
-  margin-left: 0px;
   display: flex;
-  align-items: left;
-  justify-content: left;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  border: 0.5px solid #ccc;
+  color:#f2f2f2;
   border-radius: 5px;
-  padding: 10px;
-  font-size: 16px;
-  font-weight: bold;
+  background-image: url("./assets/upload_icon.svg");
+  background-repeat: no-repeat;
+  background-size: 8%;
+  background-position: left;
+  background-position-x: 1vw;
+  text-align: center;
+  line-height: 20px;
+  font-size: 19px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  width: 23vw;
+  height: 7.5vh;
+}
+
+#upload_icon{
+  background-image: url("./assets/upload_icon.svg");
+  z-index: 999;
 }
 
 #logo-upload-button:hover {
+  display: flex;
   background-color: #f5f5f5;
 }
 
-#logo-upload-button img {
-  margin-right: 10px;
-  height: 20px;
-  width: 20px;
-}
-
-.logo-container{
+.logo-container {
   position: absolute;
-  top: 330px; 
-  left: 190px; 
-  z-index: 1; 
+  top: 330px;
+  left: 190px;
+  z-index: 1;
   width: 30%;
 }
-#logo-upload-button{
-  width: 270px;
-  height: 50px;
-  align-items: center;
-  text-align: center;
-}
-
-
-
-
