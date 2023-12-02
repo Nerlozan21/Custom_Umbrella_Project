@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/Yello.png" type="image/icon type">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/Yello.png" type="image/icon type" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Customize umbrella</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="image-container">
-          <div id="loader-container" class="loader-container">
-            <img src="./assets/loader_icon.svg" alt="loader" width="100px">
-          </div>
-          <div id="logo-container" class="logo-container">
-            <img id="uploaded-logo" class="uploaded-logo" src="" alt="" width="40px">
-          </div>
-          <img id="umbrella-image" class="umbrella-image" src="./assets/Blue.png" alt="blue umbrella">
+      <div class="image-container">
+        <div id="loader-container" class="loader-container">
+          <img src="./assets/loader_icon.svg" alt="loader" width="100px" />
         </div>
-        <div class="themes-container">
-          <h1>Custom Umbrella</h1>
-          <div class="themes">
-
-              <img id="blue-theme"src="./icons/blue-icon.ico" alt="blue theme">
-
-              <img id="yellow-theme"src="./icons/yellow-icon.ico" alt="yellow theme">
-
-              <img id="pink-theme"src="./icons/pink-icon.ico" alt="pink theme">
-
-            <div class="pera">
-                <h3>Customize your umbrella</h3>
-                <p>
-                    Upload a logo for an instant preview. <br>
-                    .png and .jpg files only. Max file size 5MB.
-                </p>
-            </div>
-            <div class="upload-button">
-              <input type="file" id="logo-upload-input" accept=".png,.jpg" style="display:none">
-              <button id="logo-upload-button">
-                <img src="./assets/upload_icon.svg" alt="upload logo" style="align-self: start;">
-                Upload Logo
-              </button>
-            </div>
+        <div id="logo-container" class="logo-container">
+          <img
+            id="uploaded-logo"
+            class="uploaded-logo"
+            src=""
+            alt=""
+            width="40px"
+          />
+        </div>
+        <img
+          id="umbrella-image"
+          class="umbrella-image"
+          src="./assets/Blue.png"
+          alt="blue umbrella"
+        />
+      </div>
+      <div class="themes-container">
+        <h1>Custom Umbrella</h1>
+        <div class="themes">
+          <img id="blue-theme" src="./icons/blue-icon.ico" alt="blue theme" />
+          <img
+            id="yellow-theme"
+            src="./icons/yellow-icon.ico"
+            alt="yellow theme"
+          />
+          <img id="pink-theme" src="./icons/pink-icon.ico" alt="pink theme" />
+          <div class="pera">
+            <h3>Customize your umbrella</h3>
+            <p>
+              Upload a logo for an instant preview. <br />
+              .png and .jpg files only. Max file size 5MB.
+            </p>
+          </div>
+          <div class="upload-button">
+            <input
+              type="file"
+              id="logo-upload-input"
+              accept=".png,.jpg"
+              style="display: none"
+            />
+            <button id="logo-upload-button">
+              <p id = "upload_icon"/>
+              <p id = "typography">
+              Upload Logo</p>
+            </button>
           </div>
         </div>
       </div>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
