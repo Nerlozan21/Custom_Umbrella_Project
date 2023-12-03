@@ -23,20 +23,20 @@ function hideLoader() {
 
 function handleLogoUpload(event) {
   const file = event.target.files[0];
-  const maxSizeInBytes =  5*1024*1024;
-  if (file.size > maxSizeInBytes){
-    alert("Please upload a file with size less than 5MB");
-    file = "";
-    return;
-  }
-
+  const maxSizeInBytes = 5 * 1024 * 1024;
   const reader = new FileReader();
   reader.readAsDataURL(file);
+  if (file.size > maxSizeInBytes) {
+    alert("Please upload a file with size less than 5MB");
+    return;
+  }
   reader.onloadend = () => {
     const uploadedLogo = document.getElementById("uploaded-logo");
+    uploadedLogo.onload = () => {
+      uploadedLogo.style.display = "block";
+      umbrellaImage.style.zIndex = "-1";
+    };
     uploadedLogo.src = reader.result;
-    uploadedLogo.style.display = "block";
-    umbrellaImage.style.zIndex = "-1";
   };
 }
 
