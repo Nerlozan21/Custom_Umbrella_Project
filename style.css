@@ -3,9 +3,14 @@
   font-family: "Arimo", sans-serif;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
+.main-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-content: center;
+  justify-self: center;flex-wrap: wrap;
   align-items: center;
   height: 90vh;
   width: 98vw;
@@ -13,10 +18,31 @@
 
 .image-container {
   position: relative;
-  width: 40%;
-  text-align: center;
-  margin-right: 20px;
-  margin-left: 150px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.logo-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  z-index: 1;
+}
+
+.uploaded-logo {
+  width: 40px;
+  position: absolute;
+  bottom: -20%;
+  left: 15%;
+  transform: translateX(-50%);
+  width: 30%;
+  z-index: 1;
+}
+
+.logo-button{
+  display: none;
 }
 
 .loader-container {
@@ -47,19 +73,6 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.logo-container {
-  position: absolute;
-  top: 330px;
-  left: 190px;
-  z-index: 1;
-  width: 30%;
-}
-
-.uploaded-logo{
-  width: 40px;
-  border: 2px solid red;
 }
 
 .umbrella-image {
@@ -96,7 +109,7 @@
   margin-bottom: 20px;
 }
 
-.logo-upload-input{
+.logo-upload-input {
   display: none;
 }
 
@@ -120,7 +133,7 @@
   height: 7.5vh;
 }
 
-#upload_icon{
+#upload_icon {
   background-image: url("./assets/upload_icon.svg");
   z-index: 999;
 }
@@ -129,4 +142,3 @@
   display: flex;
   background-color: #f5f5f5;
 }
-
