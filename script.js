@@ -28,6 +28,7 @@ function handleLogoUpload(event) {
   reader.readAsDataURL(file);
   if (file.size > maxSizeInBytes) {
     alert("Please upload a file with size less than 5MB");
+    location.reload();
     return;
   }
   reader.onloadend = () => {
