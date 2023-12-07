@@ -12,6 +12,8 @@ logoUploadInput.setAttribute("accept", ".jpg,.png");
 logoUploadInput.style.display = "none";
 document.body.style.backgroundColor = "#C5E0DC";
 logoUploadButton.style.backgroundColor = "#0000FF";
+  // const imageInput = document.getElementById("logo-upload-input")
+const imageButton = document.getElementById("logo-upload-button")
 
 function showLoader() {
   loaderContainer.style.opacity = "1";
@@ -23,9 +25,14 @@ function hideLoader() {
 
 function handleLogoUpload(event) {
   const file = event.target.files[0];
+  const fileName = file.name;
+  const clippedText = fileName.slice(0,15);
+  const finalText = clippedText.concat(".....");
   const maxSizeInBytes = 5 * 1024 * 1024;
   const reader = new FileReader();
   reader.readAsDataURL(file);
+  imageButton.textContent = finalText;
+  console.log(finalText);
   if (file.size > maxSizeInBytes) {
     alert("Please upload a file with size less than 5MB");
     location.reload();
