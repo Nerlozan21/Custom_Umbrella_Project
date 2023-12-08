@@ -26,13 +26,11 @@ function hideLoader() {
 function handleLogoUpload(event) {
   const file = event.target.files[0];
   const fileName = file.name;
-  const clippedText = fileName.slice(0,15);
-  const finalText = clippedText.concat(".....");
+  let finalText = fileName.length > 17 ? fileName.slice(0, 17).concat("....") : fileName;
+  imageButton.textContent = finalText;
   const maxSizeInBytes = 5 * 1024 * 1024;
   const reader = new FileReader();
   reader.readAsDataURL(file);
-  imageButton.textContent = finalText;
-  console.log(finalText);
   if (file.size > maxSizeInBytes) {
     alert("Please upload a file with size less than 5MB");
     location.reload();
