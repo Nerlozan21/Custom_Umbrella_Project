@@ -113,6 +113,17 @@
   display: none;
 }
 
+/* #clear-icon {
+  display: none;
+  margin-left: 10px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+#image-upload-button:hover #clear-icon {
+  display: inline-block;
+} */
+
 #logo-upload-button {
   display: flex;
   align-items: center;
@@ -162,9 +173,6 @@
 }
 
 @media (max-width: 768px) {
-  .image-container {
-    width: 60%;
-  }
   .umbrella-image {
     width: 100%;
   }
@@ -174,5 +182,13 @@
   }
   #logo-upload-button{
     width: 52vw;
+  }
+  .uploaded-logo{
+    left: 50%;
+  }
+  .themes-container {
+    text-align: justify;
+    position: relative;
+    left: 6%;
   }
 }

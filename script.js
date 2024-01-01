@@ -12,7 +12,6 @@ logoUploadInput.setAttribute("accept", ".jpg,.png");
 logoUploadInput.style.display = "none";
 document.body.style.backgroundColor = "#C5E0DC";
 logoUploadButton.style.backgroundColor = "#0000FF";
-  // const imageInput = document.getElementById("logo-upload-input")
 const imageButton = document.getElementById("logo-upload-button")
 
 function showLoader() {
